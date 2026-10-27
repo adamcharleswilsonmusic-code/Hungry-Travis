@@ -1,0 +1,11 @@
+# Hungry Travis licensing
+
+Hungry Travis uses GPL-3.0-only native platform and game code. The full license is in [LICENSE](LICENSE). Preserve the copyright and license notices in the source, and provide the complete corresponding source with any distribution of the firmware. The release source includes the native game, platform, update loader, build/packaging/install tools, local test surface and macOS recording helpers.
+
+The FM-1 platform is derived from Felucca by Leo Kuroshita (@kurogedelic), Hügelton Instruments, through the X0X/FoMni adaptations by Charles Vestal and the local project lineage. Existing headers are retained. The portable C face geometry, renderer, spoon and feeding physics, reward animation, character audio scheduler, ambient synthesis and live-state bridge were developed for Hungry Travis. Historical references to Hungry Thomas in retained source and recordings reflect the project's earlier name.
+
+Adam Wilson supplied the character-reference drawing and thirteen original character voice recordings. The original WAVs, hashes and processing details are retained under assets/audio/. The audio manifest identifies these as user-supplied project assets; it does not declare a separate standardized media license. A source-code license header on generated data does not replace the provenance of a recording. Prior-game artwork, music and voice banks are not part of Hungry Travis.
+
+Fonts retain their individual SIL Open Font License texts under assets/fonts/. Three unchanged JieLi package inputs retain the Apache-2.0 license and attribution under vendor/ac79/ and LICENSES/. The native firmware and local recording viewer do not require Emscripten; historical Emscripten, musl and compiler-rt license texts remain in LICENSES/.
+
+The three JieLi files are opaque vendor binaries. Their upstream root-license and credit evidence is retained; this project does not claim an independent audit of their contents or redistribution authority. No complete SDK, compiler toolchain or macOS framework binary is included in the source package. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the component inventory and the source archive’s fm1/BUILDING.md for external build dependencies.

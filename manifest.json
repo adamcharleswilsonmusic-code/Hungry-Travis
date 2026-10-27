@@ -1,0 +1,103 @@
+{
+  "project": "Hungry Travis",
+  "hardware": "M-VAVE FM-1",
+  "firmware_identity": "FM-1_797",
+  "publication_prepared": "2026-10-26",
+  "firmware": {
+    "file": "HUNGRY-TRAVIS-FM-1_797.fwsc",
+    "bytes": 609657,
+    "sha256": "de460db393835644f013540ba5620396eb23c72e4373cdcbac889466bd7ef32c",
+    "app_bytes": 501948,
+    "application_ram_bytes": 23212,
+    "pool_ram_bytes": 288000
+  },
+  "source": {
+    "archive": "Hungry-Travis-FM-1_797-source.zip",
+    "archive_root": "Hungry-Travis",
+    "working_source_commit": "bec02195162e2da5a0c3911e461ad2e115df9c46",
+    "firmware_code_and_audio_unchanged": true,
+    "publication_changes": [
+      "Portable host/build environment and Python invocations",
+      "Generate lookup-table header for fresh host startup/checks",
+      "Accurate build/licensing/publication documentation",
+      "Remove machine-specific paths from metadata",
+      "Preserve drawing pixels while excluding camera/XMP metadata; original HEIC kept outside release",
+      "Restore Google copyright/derivation attribution for retained msfa table-generator material; syntax tree unchanged"
+    ]
+  },
+  "verification": {
+    "firmware_rebuild_byte_identical": true,
+    "host_check_suite": "passed",
+    "capture_protocol_tests": "3 passed",
+    "all_13_recorded_voice_hashes": "unchanged",
+    "vendor_and_font_inputs": "unchanged",
+    "original_working_tree": "clean and unchanged",
+    "device_checkpoint": "Historical October 23 post-restart identity, USB audio enumeration and matching live follower checks passed. No device action was taken during publication preparation.",
+    "earlier_performance": "16.07 FPS average belongs to FM-1_796 in an observed mode; no new 797 or fifth-feed peak FPS benchmark and no new movie export claimed."
+  },
+  "licenses": {
+    "source_code": "GPL-3.0-only",
+    "fonts": "SIL OFL 1.1; notices in source archive",
+    "vendor_inputs": "Three pinned AC79 package binaries with retained Apache-2.0 upstream evidence and audit limitation",
+    "media": "Adam Wilson supplied the drawing and 13 character recordings; original audio and provenance in archive; no separate standardized media license stated"
+  },
+  "excluded": [
+    "Private playthroughs and capture sessions",
+    "Developer virtual environment, credentials and Git history",
+    "Previous games and checkpoints",
+    "Compiler installation, full SDK, generated build products",
+    "Original HEIC camera file and drawing metadata"
+  ],
+  "published_files": [
+    {
+      "name": "APACHE-2.0.txt",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "name": "HUNGRY-TRAVIS-FM-1_797.fwsc",
+      "bytes": 609657,
+      "sha256": "de460db393835644f013540ba5620396eb23c72e4373cdcbac889466bd7ef32c"
+    },
+    {
+      "name": "Hungry-Travis-FM-1_797-source.zip",
+      "bytes": 18604804,
+      "sha256": "3bec61a6cff094f141e9ed7bec648161c95b4692507a086837ac4505d6c31d62"
+    },
+    {
+      "name": "Hungry-Travis-Quick-Start.pdf",
+      "bytes": 46379,
+      "sha256": "0dc73cdcd8abf9cc1ccfc76621aeee640f7f7859697512147abed456d635f15d"
+    },
+    {
+      "name": "LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+    },
+    {
+      "name": "LICENSING-REVIEW.md",
+      "bytes": 2332,
+      "sha256": "6f59dc9fa3f48cade742393ee3c7d24402dd5211686794bfaeb0d5475db78fdc"
+    },
+    {
+      "name": "LICENSING.md",
+      "bytes": 2228,
+      "sha256": "6a94048479d28c029cdb9dd0497183ddf51ac20390cb47a592ce0e917ae07184"
+    },
+    {
+      "name": "QUICKSTART.md",
+      "bytes": 2076,
+      "sha256": "38a0903b929a54c023d595b58dc7b3f59cefa8749210f7d658378d9daf9986ce"
+    },
+    {
+      "name": "README.md",
+      "bytes": 5979,
+      "sha256": "086be92d65bcc9a60690a4b3d52433bcc2eda6d4daf5919d0631dadead272deb"
+    },
+    {
+      "name": "THIRD_PARTY_NOTICES.md",
+      "bytes": 3817,
+      "sha256": "55b8e206355e6661d183d7ec71ba92bcd4322ee1b2a92c97f633f16cf1f35dd4"
+    }
+  ]
+}
