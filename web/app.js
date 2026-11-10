@@ -1,0 +1,35 @@
+const canvas=document.querySelector('#face'),ctx=canvas.getContext('2d');
+const state={yaw:0,pitch:0,mouth:.22,time:0,motion:true,keys:0,reset:0,face:0,follow:true};
+const mouth=document.querySelector('#mouth'),tilt=document.querySelector('#tilt'),motion=document.querySelector('#motion'),status=document.querySelector('#status'),error=document.querySelector('#error');
+let running=true,last=performance.now(),drag=null,frames=0;
+function update(){document.querySelector('#view-mode-label').textContent=state.follow?'LIVE FM-1':'DRAG TO TURN';canvas.setAttribute('aria-label',state.follow?'Live FM-1 game picture':'Native test. Drag to rotate.');mouth.disabled=!state.face;document.querySelector('#mode').textContent=state.face?'Switch to spoon test':'Switch to face study';document.querySelector('#mouth-value').textContent=`${Math.round(state.mouth*100)}%`;document.querySelector('#tilt-value').textContent=`${Math.round(state.pitch*180/Math.PI)}°`;document.querySelectorAll('[data-yaw]').forEach(b=>b.classList.toggle('selected',Math.abs(+b.dataset.yaw-state.yaw)<.03));}
+mouth.oninput=()=>{state.mouth=+mouth.value/100;update()};tilt.oninput=()=>{state.pitch=+tilt.value*Math.PI/180;update()};motion.onchange=()=>state.motion=motion.checked;
+document.querySelectorAll('[data-yaw]').forEach(b=>b.onclick=()=>{state.yaw=+b.dataset.yaw;update()});
+document.querySelector('#reset').onclick=()=>{Object.assign(state,{yaw:0,pitch:0,mouth:.22,time:0,motion:true,keys:0,reset:1});mouth.value=22;tilt.value=0;motion.checked=true;update()};
+canvas.onpointerdown=e=>{canvas.setPointerCapture(e.pointerId);drag={x:e.clientX,y:e.clientY,yaw:state.yaw,pitch:state.pitch};};canvas.onpointermove=e=>{if(!drag)return;state.yaw=Math.max(-1.5,Math.min(1.5,drag.yaw+(e.clientX-drag.x)*.008));state.pitch=Math.max(-.4,Math.min(.4,drag.pitch+(e.clientY-drag.y)*.004));tilt.value=state.pitch*180/Math.PI;update()};canvas.onpointerup=canvas.onpointercancel=()=>drag=null;
+document.querySelector('#mode').onclick=()=>{state.face=state.face?0:1;state.keys=0;update()};
+document.querySelector('#reload-food').onclick=()=>{state.reset=1;canvas.focus()};
+function padUpdate(){document.querySelectorAll('[data-key]').forEach(b=>b.classList.toggle('held',!!(state.keys&+b.dataset.key)))}
+document.querySelectorAll('[data-key]').forEach(b=>{b.onpointerdown=e=>{e.preventDefault();b.setPointerCapture(e.pointerId);state.keys|=+b.dataset.key;padUpdate()};b.onpointerup=b.onpointercancel=()=>{state.keys&=~+b.dataset.key;padUpdate()}});
+const bindings={j:1,l:2,i:4,k:8,a:1,d:2,w:4,s:8,q:16,e:32,ArrowLeft:1,ArrowRight:2,ArrowUp:4,ArrowDown:8};
+window.addEventListener('keydown',e=>{if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName))return;if(e.key===' '){e.preventDefault();if(state.face){state.mouth=state.mouth>.5?.22:.95;mouth.value=state.mouth*100;update()}else state.reset=1;return;}if(bindings[e.key]){e.preventDefault();state.keys|=bindings[e.key];padUpdate()}});
+window.addEventListener('keyup',e=>{if(bindings[e.key]){state.keys&=~bindings[e.key];padUpdate()}});window.addEventListener('blur',()=>{state.keys=0;padUpdate()});
+const sketch=document.querySelector('#sketch');document.querySelector('#reference').onclick=()=>sketch.showModal();document.querySelector('#close-sketch').onclick=()=>sketch.close();
+const image=ctx.createImageData(240,240);const pixels=image.data;
+async function render(){
+ if(!running)return;const now=performance.now(),dt=Math.min(.1,(now-last)/1000);if(state.motion)state.time+=dt;last=now;
+ try{const q=new URLSearchParams({yaw:state.yaw,pitch:state.pitch,mouth:state.mouth,time:state.time,keys:state.keys,reset:state.reset,paused:state.motion?0:1,face:state.face,dt});const response=await fetch(state.follow?'/capture/frame.rgb':`/frame.rgb?${q}`,{cache:'no-store'});state.reset=0;if(!response.ok)throw new Error(state.follow?'Connect FM-1 below to follow the console.':'Native renderer unavailable');const raw=new Uint8Array(await response.arrayBuffer());if(raw.length!==115200)throw new Error('Incomplete native frame');for(let i=0,j=0;i<raw.length;i+=2,j+=4){const c=(raw[i]<<8)|raw[i+1];pixels[j]=((c>>11)&31)*255/31;pixels[j+1]=((c>>5)&63)*255/63;pixels[j+2]=(c&31)*255/31;pixels[j+3]=255;}ctx.putImageData(image,0,0);frames++;status.textContent=state.follow?'ACTUAL FM-1 STATE · SHARED NATIVE RENDERER':'SHARED NATIVE C RENDERER · LOCAL TEST';error.hidden=true;}catch(e){error.textContent=e.message;error.hidden=false;status.textContent='NATIVE RENDERER DISCONNECTED';}
+ setTimeout(render,25);
+}
+let captureToken='',captureBusy=false;
+const captureStatus=document.querySelector('#capture-status'),exportPath=document.querySelector('#export-path'),connect=document.querySelector('#connect-fm1'),disconnect=document.querySelector('#disconnect-fm1'),record=document.querySelector('#record-fm1'),stopExport=document.querySelector('#stop-export'),finishedMovie=document.querySelector('#finished-movie'),localControls=document.querySelector('#local-controls');
+async function captureRefresh(){
+ try{const r=await fetch('/capture/status',{cache:'no-store'}),s=await r.json();captureToken=s.token;const rec=s.recording,active=['starting','recording','stopping','exporting'].includes(rec.status);
+ connect.disabled=captureBusy||s.live.requested;disconnect.disabled=captureBusy||!s.live.requested||active;record.disabled=captureBusy||!s.live.connected||active||!state.follow;document.querySelector('#local-test').disabled=active;stopExport.disabled=captureBusy||!['starting','recording'].includes(rec.status);
+ captureStatus.textContent=(active||['complete','error'].includes(rec.status)?rec.message:s.live.message)+(active?` · ${rec.frames} frames · ${rec.seconds}s`:'');exportPath.textContent=rec.output||`${rec.destination}/Hungry-Travis-[date-and-time].mov`;finishedMovie.hidden=rec.status!=='complete';finishedMovie.href='/capture/movie';
+ }catch(e){record.disabled=stopExport.disabled=true;captureStatus.textContent='Recording service unavailable. Restart Hungry Travis start.sh.';}
+}
+async function captureAction(action){captureBusy=true;try{await captureRefresh();const r=await fetch('/capture/'+action,{method:'POST',headers:{'X-Capture-Token':captureToken}}),s=await r.json();if(!r.ok)throw Error(s.error||'Action unavailable');if(action==='connect'){state.follow=true;state.keys=0;localControls.hidden=true;update();}}catch(e){captureStatus.textContent=e.message;}finally{captureBusy=false;await captureRefresh();}}
+connect.onclick=()=>captureAction('connect');disconnect.onclick=()=>captureAction('disconnect');record.onclick=()=>captureAction('record');stopExport.onclick=()=>captureAction('stop');document.querySelector('#local-test').onclick=()=>{state.follow=!state.follow;state.keys=0;localControls.hidden=state.follow;document.querySelector('#local-test').textContent=state.follow?'Use local test instead':'Return to live FM-1';update();};
+setInterval(captureRefresh,500);captureRefresh();
+window.htPrototype={state,get frames(){return frames},stop(){running=false}};update();render();

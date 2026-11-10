@@ -1,0 +1,398 @@
+{
+  "format": "hungry-travis-ima-wav-v1",
+  "license": "User-supplied Adam Wilson character recordings; original source files retained unchanged",
+  "source_folder": "assets/audio/originals",
+  "sample_rate": 22050,
+  "channels": 1,
+  "block_bytes": 256,
+  "block_samples": 505,
+  "envelope_hz": 50,
+  "bank_bytes": 385792,
+  "bank_cap_bytes": 393216,
+  "bank_sha256": "b87cd9ae090c659a898dd6017354e1c12a2d94e98a002d54074b786411360a74",
+  "envelope_bytes": 1725,
+  "envelope_sha256": "81d7a8a3891a211761f9ea631a3d0feb565412dfc5e4fabda227586369a56826",
+  "original_seconds": 34.38925,
+  "decoded_seconds": 34.38920634920635,
+  "processing": "Full duration; DC removal; 64-tap Blackman sinc anti-alias resampling, cutoff94% target Nyquist; peak-3dBFS with gain<=4;5ms fades; canonical IMA4; decoded50Hz RMS normalized per clip",
+  "clips": [
+    {
+      "id": 0,
+      "name": "happy 1",
+      "semantic_id": "HT_VOICE_HAPPY1",
+      "original_file": "originals/happy 1.wav",
+      "original_sha256": "7c4b6c0fb1efda2ff15ef15f0055c5f21488c0620abfcef11bc05bbcd941d851",
+      "original_bytes": 445244,
+      "original_format": {
+        "channels": 1,
+        "bits": 24,
+        "sample_rate": 48000,
+        "sample_count": 148388,
+        "seconds": 3.0914166666666665
+      },
+      "offset": 0,
+      "encoded_bytes": 34560,
+      "sample_count": 68166,
+      "sample_rate": 22050,
+      "encoded_sha256": "8d451e42d80ac75da182db81ef5e7cb4f86585a165b886ad6ec87dbe363ee319",
+      "decoded_pcm16_sha256": "31c92ddb4b2705268c762d60ac0ab1308a8e5cf92bada2470280de2ead73cbc3",
+      "envelope_offset": 0,
+      "envelope_count": 155,
+      "processing": {
+        "dc_removed": 2.790592718732951e-06,
+        "linear_gain": 1.0768114258905497,
+        "peak_pcm16": 23197
+      },
+      "decode_snr_db": 22.72464089148381
+    },
+    {
+      "id": 1,
+      "name": "happy 2",
+      "semantic_id": "HT_VOICE_HAPPY2",
+      "original_file": "originals/happy 2.wav",
+      "original_sha256": "07354941bac77812338d6158c809f247bb4c6d681ec0ea6f721f9a20f9b7d9df",
+      "original_bytes": 256128,
+      "original_format": {
+        "channels": 1,
+        "bits": 24,
+        "sample_rate": 48000,
+        "sample_count": 85349,
+        "seconds": 1.7781041666666666
+      },
+      "offset": 34560,
+      "encoded_bytes": 19968,
+      "sample_count": 39207,
+      "sample_rate": 22050,
+      "encoded_sha256": "eecd6288f9c7663a4b89608be179154bac5d8b6b45eaae610c40d02aad91ae6d",
+      "decoded_pcm16_sha256": "c445d6dfeb3856dc48816106f9f4fb4896e7bd83d61f6c0aa1566e1b15cadd7d",
+      "envelope_offset": 155,
+      "envelope_count": 89,
+      "processing": {
+        "dc_removed": -4.49204621558818e-06,
+        "linear_gain": 1.6821097842837751,
+        "peak_pcm16": 23197
+      },
+      "decode_snr_db": 26.52120584979155
+    },
+    {
+      "id": 2,
+      "name": "happy 3",
+      "semantic_id": "HT_VOICE_HAPPY3",
+      "original_file": "originals/happy 3.wav",
+      "original_sha256": "cfb9b3bfb79ff47abb3f640dd3a053b1653fc1f3406550d152d7257ae515c414",
+      "original_bytes": 272150,
+      "original_format": {
+        "channels": 1,
+        "bits": 24,
+        "sample_rate": 48000,
+        "sample_count": 90690,
+        "seconds": 1.889375
+      },
+      "offset": 54528,
+      "encoded_bytes": 21248,
+      "sample_count": 41661,
+      "sample_rate": 22050,
+      "encoded_sha256": "efaac150e59fdf581b0cc1a59e03b51acae1c466ec383b3992b3e8ccd23fb6f7",
+      "decoded_pcm16_sha256": "7b8a9a5c01f7ab1c5b919b01877f0a60de86fd9e0fbbe4eb1801f06586ba61e7",
+      "envelope_offset": 244,
+      "envelope_count": 95,
+      "processing": {
+        "dc_removed": -3.6758439823155563e-06,
+        "linear_gain": 1.7446180770432418,
+        "peak_pcm16": 23197
+      },
+      "decode_snr_db": 33.71122635880014
+    },
+    {
+      "id": 3,
+      "name": "angry 1",
+      "semantic_id": "HT_VOICE_ANGRY1",
+      "original_file": "originals/angry 1.wav",
+      "original_sha256": "041d1d934c406ae5073a7281c8ec12726ec774fa729deb6f4d851bf3759143ef",
+      "original_bytes": 253914,
+      "original_format": {
+        "channels": 1,
+        "bits": 24,
+        "sample_rate": 48000,
+        "sample_count": 84611,
+        "seconds": 1.7627291666666667
+      },
+      "offset": 75776,
+      "encoded_bytes": 19712,
+      "sample_count": 38868,
+      "sample_rate": 22050,
+      "encoded_sha256": "e2f5e010ba8c5119387b969ca2cb53f6b4c8a671f6d073850f4669bc6c92a871",
+      "decoded_pcm16_sha256": "de093e34cd313ad2867e8803f29432b5d06cb705ce4515fcdec318b854ee8a70",
+      "envelope_offset": 339,
+      "envelope_count": 89,
+      "processing": {
+        "dc_removed": 2.175508757076656e-06,
+        "linear_gain": 1.3365208434730604,
+        "peak_pcm16": 23197
+      },
+      "decode_snr_db": 26.665704769740803
+    },
+    {
+      "id": 4,
+      "name": "angry 2",
+      "semantic_id": "HT_VOICE_ANGRY2",
+      "original_file": "originals/angry 2.wav",
+      "original_sha256": "88f673a27931dc23beab6dff7f89417a8a39e2f663141c3264b7565c43fdfad3",
+      "original_bytes": 314696,
+      "original_format": {
+        "channels": 1,
+        "bits": 24,
+        "sample_rate": 48000,
+        "sample_count": 104872,
+        "seconds": 2.184833333333333
+      },
+      "offset": 95488,
+      "encoded_bytes": 24576,
+      "sample_count": 48176,
+      "sample_rate": 22050,
+      "encoded_sha256": "de44cdd8a03bbd0e340362ecf1a07e126c55cabfeca0c3dca75bfa6623ccc9b9",
+      "decoded_pcm16_sha256": "bbb4891ba6f113b1e56f022912e589622becd0f19c86d22606b51919710792a5",
+      "envelope_offset": 428,
+      "envelope_count": 110,
+      "processing": {
+        "dc_removed": 1.0107303134679845e-05,
+        "linear_gain": 0.9563823660430288,
+        "peak_pcm16": 23197
+      },
+      "decode_snr_db": 23.302352765234144
+    },
+    {
+      "id": 5,
+      "name": "angry 3",
+      "semantic_id": "HT_VOICE_ANGRY3",
+      "original_file": "originals/angry 3.wav",
+      "original_sha256": "3556ef1431515e3a4099335809d5febf924cc48edd5ea0f8987c07f3b6e60384",
+      "original_bytes": 514850,
+      "original_format": {
+        "channels": 1,
+        "bits": 24,
+        "sample_rate": 48000,
+        "sample_count": 171590,
+        "seconds": 3.5747916666666666
+      },
+      "offset": 120064,
+      "encoded_bytes": 40192,
+      "sample_count": 78824,
+      "sample_rate": 22050,
+      "encoded_sha256": "3a6fdf51c859991f6d3bf3c3bc4841f615987b81fd25f685ce489ef22642bc59",
+      "decoded_pcm16_sha256": "555a69d7f5d312a5a8c6037beb06f5669783400c3209aa4ed651092482535e60",
+      "envelope_offset": 538,
+      "envelope_count": 179,
+      "processing": {
+        "dc_removed": -5.165317786932591e-06,
+        "linear_gain": 0.984614112858315,
+        "peak_pcm16": 23197
+      },
+      "decode_snr_db": 27.653896097991687
+    },
+    {
+      "id": 6,
+      "name": "angry 4",
+      "semantic_id": "HT_VOICE_ANGRY4",
+      "original_file": "originals/angry 4.wav",
+      "original_sha256": "80af5d0e9e89127c2263b1ad256d39974e5a6fcca7e632870364ff5439fc8151",
+      "original_bytes": 248720,
+      "original_format": {
+        "channels": 1,
+        "bits": 24,
+        "sample_rate": 48000,
+        "sample_count": 82880,
+        "seconds": 1.7266666666666666
+      },
+      "offset": 160256,
+      "encoded_bytes": 19456,
+      "sample_count": 38073,
+      "sample_rate": 22050,
+      "encoded_sha256": "9b17df22e67d665023769ae34ae4b616f46865619922bf46bc738c3bb8de629d",
+      "decoded_pcm16_sha256": "f71eda7b43108efa681131a3a75aebb16e85792ebf5335ff13b409f091305652",
+      "envelope_offset": 717,
+      "envelope_count": 87,
+      "processing": {
+        "dc_removed": 1.7087118853043e-06,
+        "linear_gain": 0.7875356370891198,
+        "peak_pcm16": 23197
+      },
+      "decode_snr_db": 28.07431744654117
+    },
+    {
+      "id": 7,
+      "name": "angry 5",
+      "semantic_id": "HT_VOICE_ANGRY5",
+      "original_file": "originals/angry 5.wav",
+      "original_sha256": "008600c054a98ed6f5332a9a59ef517ee84e6c140f3daa343c8baf0f3e13d8ee",
+      "original_bytes": 372968,
+      "original_format": {
+        "channels": 1,
+        "bits": 24,
+        "sample_rate": 48000,
+        "sample_count": 124296,
+        "seconds": 2.5895
+      },
+      "offset": 179712,
+      "encoded_bytes": 29184,
+      "sample_count": 57098,
+      "sample_rate": 22050,
+      "encoded_sha256": "788e138d75b4a67c02f8a5047ecd7f2e331e90e7151594c6e3587f5bc1ebfa3f",
+      "decoded_pcm16_sha256": "7c6c337fb2ee1b7d6ddad01cdf47214c5c3a0df98be4f7ffcb3b48155c2d5b7e",
+      "envelope_offset": 804,
+      "envelope_count": 130,
+      "processing": {
+        "dc_removed": -2.2221663612006237e-05,
+        "linear_gain": 0.8776835064139821,
+        "peak_pcm16": 23197
+      },
+      "decode_snr_db": 24.466424798077785
+    },
+    {
+      "id": 8,
+      "name": "zen 1",
+      "semantic_id": "HT_VOICE_ZEN1",
+      "original_file": "originals/zen 1.wav",
+      "original_sha256": "a16f0d9ea8a9f4cb7d54bade3757d37a97ca31a1a85303b06f617b867d8c668a",
+      "original_bytes": 450080,
+      "original_format": {
+        "channels": 1,
+        "bits": 24,
+        "sample_rate": 48000,
+        "sample_count": 150000,
+        "seconds": 3.125
+      },
+      "offset": 208896,
+      "encoded_bytes": 35072,
+      "sample_count": 68906,
+      "sample_rate": 22050,
+      "encoded_sha256": "e6d3e132909f1e05b0eb13c6e791b68b8e1501cbbd0dce966bc22337302d3f4d",
+      "decoded_pcm16_sha256": "4356a6c448939eb7ea55e0443b45cedaf9c5ab20dee47d671f4c1447e5ff0190",
+      "envelope_offset": 934,
+      "envelope_count": 157,
+      "processing": {
+        "dc_removed": -1.4818440430346263e-05,
+        "linear_gain": 1.7116814333849428,
+        "peak_pcm16": 23197
+      },
+      "decode_snr_db": 21.367996582829708
+    },
+    {
+      "id": 9,
+      "name": "zen 2",
+      "semantic_id": "HT_VOICE_ZEN2",
+      "original_file": "originals/zen 2.wav",
+      "original_sha256": "283c820abc6ae7e85e601cf9b0f5719d337d2d58d8b4b4be1d32e0004602a25a",
+      "original_bytes": 468080,
+      "original_format": {
+        "channels": 1,
+        "bits": 24,
+        "sample_rate": 48000,
+        "sample_count": 156000,
+        "seconds": 3.25
+      },
+      "offset": 243968,
+      "encoded_bytes": 36352,
+      "sample_count": 71662,
+      "sample_rate": 22050,
+      "encoded_sha256": "81f9c1e749acc45e4e2458cb60605c6ba0179dca125a330671ba76bd275ccff5",
+      "decoded_pcm16_sha256": "513a9e30351a594111b5e33884e9071c541a4583c7b50e13cab444cd53f24584",
+      "envelope_offset": 1091,
+      "envelope_count": 163,
+      "processing": {
+        "dc_removed": 2.447698456424274e-05,
+        "linear_gain": 0.874684160997449,
+        "peak_pcm16": 23197
+      },
+      "decode_snr_db": 26.81917024897399
+    },
+    {
+      "id": 10,
+      "name": "zen 3",
+      "semantic_id": "HT_VOICE_ZEN3",
+      "original_file": "originals/zen 3.wav",
+      "original_sha256": "88f22ccdd69730cc99c6a8258ca9854b3d478ba34cd470f08f236844b381fd62",
+      "original_bytes": 504080,
+      "original_format": {
+        "channels": 1,
+        "bits": 24,
+        "sample_rate": 48000,
+        "sample_count": 168000,
+        "seconds": 3.5
+      },
+      "offset": 280320,
+      "encoded_bytes": 39168,
+      "sample_count": 77175,
+      "sample_rate": 22050,
+      "encoded_sha256": "2a5d1c6410836dc503876f9e3a6cb20d78cd0472c7f93b3cef50ba755f9c6389",
+      "decoded_pcm16_sha256": "ad027329f687c1f57df10c29207154b332e935c710b1fb01eaeda44aae584176",
+      "envelope_offset": 1254,
+      "envelope_count": 175,
+      "processing": {
+        "dc_removed": 6.262413220446653e-06,
+        "linear_gain": 0.845720904204095,
+        "peak_pcm16": 23197
+      },
+      "decode_snr_db": 21.620311262072267
+    },
+    {
+      "id": 11,
+      "name": "zen 4",
+      "semantic_id": "HT_VOICE_ZEN4",
+      "original_file": "originals/zen 4.wav",
+      "original_sha256": "6150496936ec7efbaf8d008663887f608e4dcb84b6e2eb8f93f80af2133641fd",
+      "original_bytes": 417432,
+      "original_format": {
+        "channels": 1,
+        "bits": 24,
+        "sample_rate": 48000,
+        "sample_count": 139117,
+        "seconds": 2.898270833333333
+      },
+      "offset": 319488,
+      "encoded_bytes": 32512,
+      "sample_count": 63907,
+      "sample_rate": 22050,
+      "encoded_sha256": "6ffff9eb634ea01ad65e04b5e2b9663904722091b891f2c7ac81f3a8e7f17b76",
+      "decoded_pcm16_sha256": "17842b7032eb7dd6ea4980bbee034c3aa15bb3d41ab0f404178367b56a32fe9b",
+      "envelope_offset": 1429,
+      "envelope_count": 145,
+      "processing": {
+        "dc_removed": -4.822215990399343e-06,
+        "linear_gain": 1.9085854338014736,
+        "peak_pcm16": 23197
+      },
+      "decode_snr_db": 35.38881247130696
+    },
+    {
+      "id": 12,
+      "name": "zen 5",
+      "semantic_id": "HT_VOICE_ZEN5",
+      "original_file": "originals/zen 5.wav",
+      "original_sha256": "775e2b08bcb06e11a04e366397a7907808499e53d875d5bb8c62ba999f773909",
+      "original_bytes": 434754,
+      "original_format": {
+        "channels": 1,
+        "bits": 24,
+        "sample_rate": 48000,
+        "sample_count": 144891,
+        "seconds": 3.0185625
+      },
+      "offset": 352000,
+      "encoded_bytes": 33792,
+      "sample_count": 66559,
+      "sample_rate": 22050,
+      "encoded_sha256": "efd13c405576f42a93e6dee9a0593dd6ea7c45658e33ef9032d699c9816370ce",
+      "decoded_pcm16_sha256": "dbdb44f7e8019548b90dd4f9883e0393785a5244796909920c64c5487a71521b",
+      "envelope_offset": 1574,
+      "envelope_count": 151,
+      "processing": {
+        "dc_removed": -1.2848865494509195e-06,
+        "linear_gain": 0.9133358681953909,
+        "peak_pcm16": 23197
+      },
+      "decode_snr_db": 25.634413932186106
+    }
+  ],
+  "publication_note": "Source folder made project-relative for publication; original audio and all recorded hashes unchanged."
+}

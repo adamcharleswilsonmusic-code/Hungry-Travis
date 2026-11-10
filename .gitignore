@@ -1,0 +1,12 @@
+/fm1/build/
+/fm1/output/
+/fm1/build*.log
+/output/
+.DS_Store
+__pycache__/
+*.pyc
+/checkpoints/
+
+/recordings/
+
+.venv/

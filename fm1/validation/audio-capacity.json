@@ -1,0 +1,17 @@
+{
+  "identity": "FM-1_797",
+  "implementation": "13 user voice lines; constant-flash IMA ADPCM mono22050Hz, streamed into44100Hz stereo output with bounded state",
+  "app_bytes": 501948,
+  "app_slot_bytes": 581564,
+  "remaining_app_slot_bytes": 79616,
+  "voice_bank_bytes": 385792,
+  "voice_bank_cap_bytes": 393216,
+  "voice_bank_remaining_bytes": 7424,
+  "mouth_envelope_bytes": 1725,
+  "original_seconds": 34.38925,
+  "decoded_seconds": 34.38920634920635,
+  "originals": "fm1/assets/audio/originals",
+  "provenance": "fm1/assets/audio/ht_voice_manifest.json",
+  "scope": "Implemented player/scheduler and independent host checks pass. Physical-device performance, audio output and capture checks are recorded separately in current-build.json.",
+  "ambient": "Generated live by an88-byte fixed-point synthesizer with slow melodic glides; no recorded-audio bank storage."
+}

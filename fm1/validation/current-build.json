@@ -1,0 +1,105 @@
+{
+  "identity": "FM-1_797",
+  "status": "installed_and_verified",
+  "verified_utc": "2026-10-23T20:17:15.421299+00:00",
+  "package_sha256": "de460db393835644f013540ba5620396eb23c72e4373cdcbac889466bd7ef32c",
+  "app_bytes": 501948,
+  "ram_bytes": 23212,
+  "pool_bytes": 288000,
+  "scope": "796 behavior retained; dropped-pea cue gains another12.04dB/fourfold amplitude. Recorded voices,music,timing,controls and scheduler unchanged. Matching164-byte snapshot revision797.",
+  "host_checks": "Audio scheduler/pause and13 exact voice hashes,65 enabled mixed-overlap cases,matching capture tests and compiler/memory/reserve checks passed. The unchanged five-second cycle/native rendering retain796 validation.",
+  "timing": {
+    "fifth_total_seconds": 5.0,
+    "previous_seconds": 8.0,
+    "zen_seconds": 3.3,
+    "morph_seconds": 0.5,
+    "zoom_seconds": 1.2
+  },
+  "mix": {
+    "ambient_gain_db_vs_795": 3.01,
+    "host_mixed_peak_pcm16": 21950,
+    "host_clipping": false,
+    "ambient_state_bytes": 88,
+    "voice_gain_unchanged": true,
+    "melody": "12-note upper voice over D2/A2/C3 anchors, uneven3-7second holds and phase-continuous glides; beatless",
+    "miss_gain_db_vs_796": 12.04,
+    "miss_peak_constant": 10240,
+    "miss_actual_peak_pcm16": 9734,
+    "conservative_mix_bound_pcm16": 29728
+  },
+  "speech": "Startup happy1, then neutral happy2/happy3/happy1. Angry reloads advance without repeating last-started or last-selected reaction; new misses seed escalation. Zen1..5 unchanged, inner voice. No idle chatter or late reaction once fresh-spoon window closes.",
+  "usb_audio_enumeration_passed": true,
+  "post_restart_verification": {
+    "identity": "FM-1_797",
+    "installed": true,
+    "verified_utc": "2026-10-23T20:17:15.421299+00:00",
+    "package_hash_matches_validation": true,
+    "all_identity_checks_passed": true,
+    "observations": [
+      {
+        "elapsed_s": 0,
+        "identity": "FM-1_797",
+        "port": "Felucca"
+      },
+      {
+        "elapsed_s": 10,
+        "identity": "FM-1_797",
+        "port": "Felucca"
+      },
+      {
+        "elapsed_s": 20,
+        "identity": "FM-1_797",
+        "port": "Felucca"
+      },
+      {
+        "elapsed_s": 30,
+        "identity": "FM-1_797",
+        "port": "Felucca"
+      }
+    ],
+    "usb_audio_enumeration_passed": true,
+    "audio_device": {
+      "_name": "FoMni FM-1",
+      "coreaudio_device_input": 2,
+      "coreaudio_device_manufacturer": "FoMni",
+      "coreaudio_device_srate": 44100,
+      "coreaudio_device_transport": "coreaudio_device_type_usb",
+      "coreaudio_input_source": "spaudio_default"
+    },
+    "scope": "Installation/reboot, four MIDI identity checks over30seconds, USB audio enumeration. Hungry Travis native face renderer tested on host; device controls and measured rendering speed are separate checks. Previous game restore package preserved."
+  },
+  "live_follow_validation": {
+    "live": {
+      "requested": true,
+      "connected": true,
+      "frames": 5,
+      "corrupt": 0,
+      "message": "Following the actual FM-1. Play on the console.",
+      "seconds": 0.3,
+      "state": 2
+    },
+    "recording": {
+      "status": "ready",
+      "message": "Connect FM-1, then press Record.",
+      "frames": 0,
+      "seconds": 0,
+      "output": "",
+      "destination": "Desktop"
+    },
+    "scope": "Matching797 native live view reconnected; no game input or recording started."
+  },
+  "previous_verified_checkpoint": "checkpoints/FM-1_796/verified-build.json",
+  "remaining": "Hands-on listening to the much louder drop cue. No new797 FPS benchmark or movie export was performed. Prior796 counters are retained with their identity. Recorder is stopped/ready.",
+  "previous_runtime_measurement": {
+    "device_fps_mean": 16.07,
+    "device_fps_min": 16.05,
+    "device_fps_max": 16.13,
+    "audio_xruns_max": 0,
+    "audio_cpu_pct_max": 8,
+    "clipped_samples_max": 0,
+    "measurement_windows": 8,
+    "measurement_scope": "Actual796 read-only runtime counters in observed mode2 with live follower disconnected. Not a worst-case fifth-feed benchmark or hands-on mix listening test.",
+    "identity": "FM-1_796"
+  },
+  "historical_evidence_note": "Recorded checkpoint evidence from October 23, 2026; this is not a live status report."
+}

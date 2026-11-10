@@ -1,0 +1,33 @@
+Music Synthesizer for Android (msfa) table derivations
+
+Copyright 2012 Google Inc.
+Copyright 2013 Google Inc.
+
+Licensed under the Apache License, Version 2.0. The complete license is
+provided in Apache-2.0-msfa.txt in this directory.
+
+Hungry Travis retains the FM6 lookup-table derivations in tools/gen_tables.py
+from its platform lineage. They adapt msfa formulas to Python-generated
+tables. The literal 100-entry FM6_LFO_SOURCE values also match the lfoSource
+table in Dexed's msfa component. This package does not contain the complete
+msfa or Dexed synthesizer engine.
+
+Verified upstream source references:
+
+- msfa LFO, Copyright 2013 Google Inc.:
+  https://raw.githubusercontent.com/google/music-synthesizer-for-android/master/app/src/main/jni/lfo.cc
+- msfa pitch-envelope formulas, Copyright 2012 Google Inc.:
+  https://raw.githubusercontent.com/google/music-synthesizer-for-android/master/app/src/main/jni/pitchenv.cc
+- msfa frequency lookup, Copyright 2012 Google Inc.:
+  https://raw.githubusercontent.com/google/music-synthesizer-for-android/master/app/src/main/jni/freqlut.cc
+- Dexed msfa LFO table, Copyright 2013 Google Inc.:
+  https://raw.githubusercontent.com/asb2m10/dexed/master/source/msfa/lfo.cc
+- Dexed's README states that its msfa component remains Apache-2.0:
+  https://raw.githubusercontent.com/asb2m10/dexed/master/README.md
+
+The retained generator is an adaptation, not an unmodified upstream file.
+The attribution was restored for publication on 2026-10-26 without changing
+its values, formulas or generated output. The existing GPL-3.0-only notice
+continues to apply to the surrounding platform generator and the combined
+Hungry Travis source; the notices above preserve the Apache-licensed
+material's attribution.
