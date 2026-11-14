@@ -86,3 +86,5 @@ Extract the archive and read `fm1/BUILDING.md` to rebuild. Firmware behavior and
 The native platform descends from **Felucca → X0X → FoMni**, by Leo Kuroshita (@kurogedelic), Hügelton Instruments, and Charles Vestal. GPL-3.0-only source notices and component-specific font/vendor licenses are retained. The character drawing and recordings were supplied by Adam Wilson. See the notices for asset terms and vendor audit limitations.
 
 If you share a video, tag [@trustthismechanism on Instagram](https://www.instagram.com/trustthismechanism/) or [YouTube](https://www.youtube.com/@trustthismechanism).
+
+You can also try Hungry Travis in the browser, no flashing needed, in the free community [FM-1 Emulator](https://fm1-emulator.atst.tools/).
